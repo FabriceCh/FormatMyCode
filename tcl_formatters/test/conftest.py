@@ -10,4 +10,4 @@ def readlines(filename) -> List[str]:
 
 @pytest.fixture(scope="session")
 def raw_block() -> List[str]:
-    return readlines("/home/fab/repos/FormatMyCode/tcl_formatters/test_data/code_example_block.tcl")
+    return readlines("./tcl_formatters/test_data/code_example_block.tcl")
