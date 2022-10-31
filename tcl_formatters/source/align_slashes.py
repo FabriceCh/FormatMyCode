@@ -16,7 +16,7 @@ def read_lines(filename: str) -> List[str]:
     return lines
 
 def find_blocks(lines):
-    blocks
+    return
 
 
 if __name__ == "__main__":
