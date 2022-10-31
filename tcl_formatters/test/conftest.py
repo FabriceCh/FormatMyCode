@@ -9,5 +9,17 @@ def readlines(filename) -> List[str]:
     return lines
 
 @pytest.fixture(scope="session")
-def raw_block() -> List[str]:
-    return readlines("./tcl_formatters/test_data/code_example_block.tcl")
+def unformatted_block() -> List[str]:
+    return readlines("./tcl_formatters/test_data/unformatted/code_example_block.tcl")
+
+@pytest.fixture(scope="session")
+def unformatted_code() -> List[str]:
+    return readlines("./tcl_formatters/test_data/unformatted/code_example.tcl")
+
+@pytest.fixture(scope="session")
+def formatted_block() -> List[str]:
+    return readlines("./tcl_formatters/test_data/formatted/code_example_block.tcl")
+
+@pytest.fixture(scope="session")
+def formatted_code() -> List[str]:
+    return readlines("./tcl_formatters/test_data/formatted/code_example.tcl")
