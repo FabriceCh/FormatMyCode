@@ -23,3 +23,12 @@ def formatted_block() -> List[str]:
 @pytest.fixture(scope="session")
 def formatted_code() -> List[str]:
     return readlines("./tcl_formatters/test_data/formatted/code_example.tcl")
+
+
+@pytest.fixture(scope="session")
+def unformatted_garchomp() -> List[str]:
+    return readlines("./tcl_formatters/test_data/unformatted/garchomp.tcl")
+
+@pytest.fixture(scope="session")
+def formatted_garchomp() -> List[str]:
+    return readlines("./tcl_formatters/test_data/formatted/garchomp.tcl")

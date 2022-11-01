@@ -18,5 +18,4 @@ gigachomp::garchomp                       \
         set level 99
         set ability sandshit
         set nature adamant
-    }       
-
+    }
