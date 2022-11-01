@@ -1,26 +1,7 @@
 from typing import List
-import click
-from tcl_formatters.source.block import Block
+from src.tcl_formatter.block import Block
 
-@click.command
-@click.option("-f", "--filename")
-def align_slashes(filename: str):
-    lines = read_lines(filename)
-    new_lines = format_lines(lines)
-    write_lines(filename, new_lines)
-
-def read_lines(filename: str) -> List[str]:
-    file = open(filename, 'r')
-    lines = file.readlines()
-    file.close()
-    return lines
-
-def write_lines(filename: str, lines: List[str]) -> None:
-    file = open(filename, 'w')
-    file.writelines(lines)
-    file.close()
-
-def find_blocks_positions(lines):
+def find_blocks_positions(lines: List[str]):
     current_block_start = None
     blocks_positions = []
     for i, line in enumerate(lines):
@@ -37,7 +18,7 @@ def find_blocks_positions(lines):
                 continue
     return blocks_positions
 
-def format_lines(lines):
+def format_lines(lines: List[str]):
     blocks_positions = find_blocks_positions(lines)
     new_lines = []
     line_cursor = 0
@@ -52,6 +33,3 @@ def format_lines(lines):
     new_lines += lines[line_cursor:]
     return new_lines
 
-
-if __name__ == "__main__":
-    align_slashes()

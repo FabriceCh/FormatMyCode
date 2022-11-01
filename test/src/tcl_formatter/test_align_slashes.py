@@ -1,4 +1,4 @@
-from tcl_formatters.source.align_slashes import find_blocks_positions, format_lines
+from src.tcl_formatter.align_slashes import find_blocks_positions, format_lines
 
 def test_find_blocks_positions(unformatted_code, unformatted_garchomp):
     blocks_positions = find_blocks_positions(unformatted_code)

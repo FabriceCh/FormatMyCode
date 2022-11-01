@@ -2,7 +2,7 @@ from typing import List
 import os
 import pytest
 
-BASE_PATH = "tcl_formatters/test/test_data"
+BASE_PATH = "test/test_data"
 FORMATTED_PATH = os.path.join(BASE_PATH, "formatted/")
 UNFORMATTED_PATH = os.path.join(BASE_PATH, "unformatted/")
 

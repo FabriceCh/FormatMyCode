@@ -1,4 +1,4 @@
-from tcl_formatters.source.block import Block
+from src.tcl_formatter.block import Block
 
 def test_block_creation(unformatted_block):
     block = Block(unformatted_block)
