@@ -1,6 +1,6 @@
 from typing import List
-from tcl_formatters.source.block import Block
 import click
+from block import Block
 
 @click.command
 @click.option("-f", "--filename")
