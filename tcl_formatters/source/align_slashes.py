@@ -7,12 +7,18 @@ import click
 def align_slashes(filename: str):
     lines = read_lines(filename)
     new_lines = format_lines(lines)
+    write_lines(filename, new_lines)
 
 def read_lines(filename: str) -> List[str]:
     file = open(filename, 'r')
     lines = file.readlines()
     file.close()
     return lines
+
+def write_lines(filename: str, lines: List[str]) -> None:
+    file = open(filename, 'w')
+    file.writelines(lines)
+    file.close()
 
 def find_blocks_positions(lines):
     current_block_start = None
