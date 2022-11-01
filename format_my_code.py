@@ -1,12 +1,12 @@
 from typing import List
-from src.tcl_formatter.align_slashes import format_lines
+from src.tcl_formatter.eol_slash_formatter import EolSlashFormatter
 import click
 
 @click.command
 @click.option("-f", "--filename")
 def format_my_code(filename: str):
     lines = read_lines(filename)
-    new_lines = format_lines(lines)
+    new_lines = EolSlashFormatter.format_block(lines)
     write_lines(filename, new_lines)
 
 def read_lines(filename: str) -> List[str]:
