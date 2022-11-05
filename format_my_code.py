@@ -7,6 +7,14 @@ import click
 @click.option("-f", "--filename")
 @click.option("-r", "--range")
 def format_my_code(filename: str, range: str = ""):
+    """ Formats a .tcl file.
+    
+    Args:
+
+        filename (str): Name of the file. ex: -f code.tcl
+
+        range (str, optional): Ranges of lines to format. Defaults to all lines. ex: -r 20-30,40-50
+    """
     lines = read_lines(filename)
 
     if range == "" or range is None:
