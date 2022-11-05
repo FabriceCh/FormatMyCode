@@ -9,7 +9,7 @@ import click
 def format_my_code(filename: str, range: str = ""):
     lines = read_lines(filename)
 
-    if range == "":
+    if range == "" or range is None:
         blocks = [[0, len(lines) - 1]]
     else:
         blocks = parse_user_specified_ranges(range)
